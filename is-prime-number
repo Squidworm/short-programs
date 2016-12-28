@@ -1,0 +1,11 @@
+#function checks is integer is a prime number
+
+def is_prime(x):
+    if x < 2:
+        return False
+    else:
+        for n in range(2,x): #we can use x here because endpoint is not inclusive
+            if x % n == 0:
+                return False
+        else: 
+            return True
