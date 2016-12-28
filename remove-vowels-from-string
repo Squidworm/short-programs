@@ -1,0 +1,30 @@
+#removing vowels from string v.1
+
+def anti_vowel(text):
+    text_list = list(text) #changes string into a list
+    vowel_list = ['a','e','o','i','u', 'A', 'E', 'O', 'I', 'U']  
+    vowels_to_remove =[]
+    for letter in text_list:
+        if letter in vowel_list:
+            vowels_to_remove.append(letter)
+    list_sans_vowels = [x for x in text_list if x not in vowels_to_remove] #list comprehension
+    new_text = "".join(list_sans_vowels)        
+    return new_text
+
+print(anti_vowel('ciociosan'))           
+
+
+
+#removing vowels from string v.2
+
+def anti_vowel(text):
+    text_list = list(text) #changes string into a list
+    vowel_list = ['a','e','o','i','u', 'A', 'E', 'O', 'I', 'U']  
+   
+    for letter in text_list[:]: #semicolon makes copy of the list and iterates over it
+        if letter in vowel_list:
+            text_list.remove(letter)
+    new_text = "".join(text_list)        
+    return new_text
+
+print(anti_vowel('ciociosan'))  
