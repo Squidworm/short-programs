@@ -1,0 +1,15 @@
+# function that returns median for lists with even and uneven number of values
+def median(original_list):
+    sorted_list = sorted(original_list) #sorts from smallest to largest
+    length = len(sorted_list) #returns length
+    if length%2 !=0: #if length is not even number
+        median_for_uneven = sorted_list[int(length/2)] #calculate median by returning value at the middle index
+        return median_for_uneven
+    else: #when length is an even number
+          first_ingredient = sorted_list[length/2] #value at index after half length
+          second_ingredient = sorted_list[length/2-1] #value at index before half length
+          median_for_even = float(first_ingredient + second_ingredient)/2 #avg of two ingredients
+          return median_for_even
+
+original_list = [1,2,3,4]        
+print(median(original_list))
