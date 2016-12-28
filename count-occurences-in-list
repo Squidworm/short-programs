@@ -1,0 +1,10 @@
+#Return the number of times the item occurs in the list.
+
+def count(sequence, item):
+    occurences = []
+    for a in sequence:
+        if item == a:
+            occurences.append(a)
+    return(len(occurences))
+
+print count([1,2,3,2,3,4,1,1,1,2], 1)
