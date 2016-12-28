@@ -1,0 +1,11 @@
+#function that returns sum of digits in an integer (assuming n is integer and positive number)
+
+def digit_sum(n):
+    n_list = []
+    n_string = str(n)
+    for char in n_string:
+        n_char = int(char)
+        n_list.append(n_char)
+    return sum(n_list)    
+    
+print(digit_sum(123))
