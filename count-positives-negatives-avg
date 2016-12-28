@@ -1,0 +1,24 @@
+# Program that reads an unspecified number of integers, determines how many positive and negative values have been read and computes the total and average of the input values (not counting zeros).
+
+count_positives = 0
+count_negatives = 0
+sum_of_ints=0
+
+
+while True:
+    entered_number = int(input('Enter an integer, the input ends if it is 0: '))
+    if entered_number >0:
+        count_positives+=1
+        sum_of_ints = sum_of_ints + entered_number
+    elif entered_number <0:
+        count_negatives+=1
+        sum_of_ints = sum_of_ints + entered_number
+    elif entered_number==0:
+        if sum_of_ints ==0:
+            print("You didn't enter any number")
+        else:
+            print('The number of positives is', count_positives)
+            print('The number of negatives is', count_negatives)
+            print('The total is ', sum_of_ints)
+            print("The average is", float(sum_of_ints/count_positives+count_negatives))
+            break
