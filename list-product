@@ -1,0 +1,8 @@
+#Function that takes a list of integers as input and 
+#returns the product of all of the elements in the list.
+
+def product(list_of_integers):
+    total = 1
+    for item in list_of_integers:
+        total = item*total
+    return total
