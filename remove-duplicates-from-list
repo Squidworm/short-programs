@@ -1,0 +1,11 @@
+#A function that takes in a list and 
+#removes elements of the list that are the same.
+
+def remove_duplicates(original_list):
+    list_sans_duplicates = []
+    for item in original_list:
+        if item not in list_sans_duplicates:
+            list_sans_duplicates.append(item)
+    return list_sans_duplicates
+    
+print(remove_duplicates([1,2,2,2,3,4,1,2,3,4,5]))
