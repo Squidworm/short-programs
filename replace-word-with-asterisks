@@ -1,0 +1,27 @@
+#replace a word with asterisks (number of asterisks = number of letters replaced)
+#ver.1
+
+import string
+def censor(text, word):
+    replacement = '*'*len(word)
+    new_str = string.replace(text, word, replacement)
+    print(new_str)
+    
+censor ('cats are cats and will be cats', 'cats')
+    
+
+#replace a word with asterisks (number of asterisks = number of letters replaced)
+#ver.2
+def censor(text, word):
+    
+    split_text = text.split(" ") #turns string into a list
+    replacement = '*'*len(word) #as many stars as length of the word
+    for item in split_text:
+        if item == word:
+            word_index = split_text.index(word) #gets an index of word to remove
+            del(split_text[word_index]) #deletes item with the index returned in 7th row
+            split_text.insert(word_index, replacement) #inserts an item at certain index
+    censored_text = " ".join(split_text)
+    return censored_text
+    
+print(censor ('cats are cats and will be cats', 'cats'))
