@@ -1,0 +1,12 @@
+#reverse text
+
+def reverse(text):
+    length = - (len(text))
+    index =-1
+    rev_word = []
+    while index >= length:
+        rev_word.append(text[index]),
+        index = index -1
+    print("".join(rev_word))
+
+reverse("Fatamorgana")
