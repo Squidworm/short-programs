@@ -1,0 +1,15 @@
+#factorial
+
+def factorial(x):
+    fac_list = []
+    total =1
+    while x>0:
+        fac_list.append(x)
+        x=x-1
+    print(fac_list)
+    
+    for number in fac_list:
+        total=total*number
+    return total
+        
+print(factorial(5))
